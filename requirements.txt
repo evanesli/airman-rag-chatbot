@@ -1,0 +1,85 @@
+# Core API Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
+
+# PDF Processing
+# FIX: Removed strict version pinning to allow Python 3.13 support
+pypdf>=4.0.1
+pymupdf>=1.24.10
+pdfplumber>=0.11.0
+
+# Text Processing and NLP
+sentence-transformers>=2.3.1
+transformers>=4.37.2
+# FIX: Torch 2.1.2 does not support Python 3.13. We need 2.5.0+
+torch>=2.5.0
+nltk>=3.8.1
+spacy>=3.7.2
+
+# Vector Store and Search
+# FIX: faiss-cpu might struggle on 3.13, using latest available
+faiss-cpu>=1.7.4
+numpy>=1.26.0
+scikit-learn>=1.4.0
+
+# LLM Integration
+openai>=1.12.0
+anthropic>=0.18.1
+litellm>=1.27.0
+
+# Reranking
+rank-bm25>=0.2.2
+# For cross-encoder reranking
+sentence-transformers>=2.3.1
+
+# Configuration Management
+python-dotenv>=1.0.1
+pyyaml>=6.0.1
+
+# Database (Optional - for pgvector)
+psycopg2-binary>=2.9.9
+pgvector>=0.2.5
+
+# API and Web
+httpx>=0.26.0
+requests>=2.31.0
+
+# Data Processing
+pandas>=2.2.0
+openpyxl>=3.1.2
+
+# Logging and Monitoring
+loguru>=0.7.2
+python-json-logger>=2.0.7
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.3
+pytest-cov>=4.1.0
+
+# Code Quality
+black>=24.1.1
+flake8>=7.0.0
+mypy>=1.8.0
+
+# Visualization (for evaluation)
+matplotlib>=3.8.2
+seaborn>=0.13.1
+plotly>=5.18.0
+
+# Utilities
+tqdm>=4.66.1
+rich>=13.7.0
+click>=8.1.7
+
+# Optional - Streamlit for UI
+streamlit>=1.31.0
+
+# Optional - LangChain (if needed)
+langchain>=0.1.6
+langchain-community>=0.0.20
+
+# Optional - Document Loading
+unstructured>=0.12.2

@@ -1,0 +1,36 @@
+# Configuration file for AIRMAN RAG Chatbot
+
+# Chunking parameters
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+  strategy: "semantic"  # Options: semantic, fixed, sliding
+
+# Embedding model
+embeddings:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+
+# Vector store
+vector_store:
+  type: "faiss"
+  index_type: "IndexFlatL2"
+  
+# LLM settings
+llm:
+  provider: "openai"  # Options: openai, anthropic, local
+  model: "gpt-3.5-turbo"
+  temperature: 0.1
+  max_tokens: 1000
+
+# Retrieval settings
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.7
+  use_reranking: true
+
+# API settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
