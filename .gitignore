@@ -1,7 +1,54 @@
-venv/
-data/
-.env
+# Python
 __pycache__/
-*.pyc
-*.pdf
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+*.env
+!.env.example
+
+# Data files (IMPORTANT!)
+data/raw/*.pdf
+data/raw/*.PDF
+data/processed/
+data/vector_store/
+*.faiss
+*.pkl
+*.npy
+
+# Evaluation results (keep one sample, ignore the rest)
+evaluation_results/*.json
+# Keep sample report:
+!evaluation_results/sample_evaluation_report.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+logs/
+*.log
+
+# Models
+models/
+*.bin
+*.pt
+
+# OS
+Thumbs.db
